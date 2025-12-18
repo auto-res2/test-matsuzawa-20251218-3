@@ -119,7 +119,7 @@ def main(cfg: DictConfig) -> None:
             sys.exit(1)
         
         logger.info("=" * 80)
-        logger.info(f"✓ Experiment {cfg_merged.run.run_id} completed successfully")
+        logger.info(f"✓ Experiment {cfg_merged.run_id if hasattr(cfg_merged, 'run_id') and cfg_merged.run_id else cfg_merged.run} completed successfully")
         logger.info("=" * 80)
         
     except Exception as e:

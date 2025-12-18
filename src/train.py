@@ -47,7 +47,7 @@ class Trainer:
         """Initialize trainer with configuration."""
         self.cfg = cfg
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        self.run_id = cfg.run.run_id
+        self.run_id = cfg.run_id if hasattr(cfg, 'run_id') and cfg.run_id else cfg.run
         self.mode = cfg.mode
         self.cache_dir = Path(cfg.cache_dir)
         self.cache_dir.mkdir(parents=True, exist_ok=True)
