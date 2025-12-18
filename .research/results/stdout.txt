@@ -1,0 +1,18 @@
+=== [UV SYNC] Start at Thu Dec 18 11:03:30 UTC 2025 ===
+=== [UV SYNC] Finished successfully at Thu Dec 18 11:04:05 UTC 2025 ===
+=== [TRIAL RUN] Start for comparative-1-resnet20-cifar10 at Thu Dec 18 11:04:05 UTC 2025 ===
+[2025-12-18 11:04:06,083][__main__][INFO] - ================================================================================
+[2025-12-18 11:04:06,083][__main__][INFO] - Starting experiment run: comparative-1-resnet20-cifar10
+[2025-12-18 11:04:06,083][__main__][INFO] - Mode: trial
+[2025-12-18 11:04:06,083][__main__][INFO] - Results directory: .research/results
+[2025-12-18 11:04:06,083][__main__][INFO] - ================================================================================
+[2025-12-18 11:04:06,083][__main__][INFO] - Loading configuration from: config/runs/comparative-1-resnet20-cifar10.yaml
+[2025-12-18 11:04:06,098][__main__][INFO] - Trial mode: WandB disabled, 1 epoch, no Optuna trials
+[2025-12-18 11:04:06,098][__main__][INFO] - ================================================================================
+[2025-12-18 11:04:06,099][__main__][INFO] - LAUNCHING TRAINING SUBPROCESS
+[2025-12-18 11:04:06,099][__main__][INFO] - ================================================================================
+[2025-12-18 11:04:26,020][__main__][INFO] - ================================================================================
+[2025-12-18 11:04:26,020][__main__][INFO] - ✓ Experiment comparative-1-resnet20-cifar10 completed successfully
+[2025-12-18 11:04:26,020][__main__][INFO] - ================================================================================
+=== [TRIAL RUN] PASSED for comparative-1-resnet20-cifar10 at Thu Dec 18 11:04:26 UTC 2025 ===
+
