@@ -1,0 +1,18 @@
+defaults: []
+
+wandb:
+  entity: gengaru617-personal
+  project: 2025-11-19
+  mode: online
+
+run: ???
+mode: ???
+
+results_dir: ./results
+cache_dir: .cache
+seed: 42
+device: cuda
+num_workers: 4
+
+debug: false
+verbose: true

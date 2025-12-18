@@ -1,0 +1,88 @@
+run_id: comparative-1-resnet20-cifar10
+method: Adam-Baseline
+method_type: comparative
+comparative_index: 1
+
+model:
+  name: ResNet-20
+  architecture: resnet
+  depth: 20
+  num_classes: 10
+  use_batch_norm: true
+  input_size: 32
+  channels: 3
+
+dataset:
+  name: CIFAR-10
+  task: image_classification
+  train_split: 50000
+  test_split: 10000
+  num_classes: 10
+  preprocessing:
+    normalize: true
+    mean: [0.4914, 0.4822, 0.4465]
+    std: [0.2023, 0.1994, 0.2010]
+    augmentation: true
+    augmentation_types:
+      - random_crop
+      - random_horizontal_flip
+
+training:
+  learning_rate: 0.001
+  batch_size: 128
+  epochs: 160
+  optimizer: adam
+  warmup_steps: 500
+  weight_decay: 0.01
+  gradient_clip: 1.0
+  scheduler: cosine
+  seed: 42
+  optimizer_config:
+    betas: [0.9, 0.999]
+    eps: 1e-8
+
+optuna:
+  enabled: true
+  n_trials: 20
+  sampler: tpe
+  pruner: median
+  search_spaces:
+    - param_name: learning_rate
+      distribution_type: loguniform
+      low: 0.0001
+      high: 0.01
+    - param_name: weight_decay
+      distribution_type: loguniform
+      low: 0.0
+      high: 0.1
+
+evaluation:
+  primary_metric: test_accuracy
+  secondary_metrics:
+    - early_convergence_speed
+    - training_loss_trajectory
+    - condition_number_evolution
+    - wall_clock_time_per_epoch
+    - convergence_reliability
+    - memory_overhead
+  eval_frequency: every_epoch
+  num_seeds: 10
+  statistical_test: paired_ttest
+  significance_level: 0.05
+
+computational_resources:
+  runner_label: gpu-runner
+  vram_gb: 80
+  ram_gb: 2048
+  estimated_gpu_hours: 40
+  estimated_memory_per_run_gb: 4
+
+tags:
+  - optimization
+  - adaptive_learning_rate
+  - adam
+  - baseline
+  - cifar10
+  - resnet
+  - image_classification
+  - comparative_method
