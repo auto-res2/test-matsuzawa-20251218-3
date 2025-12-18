@@ -24,7 +24,12 @@ from optuna.samplers import TPESampler
 
 from src.model import build_model
 from src.preprocess import build_dataset, get_transforms
-from src.optimizer import CurvAL
+
+# Conditional import for CurvAL optimizer (only needed for proposed methods)
+try:
+    from src.optimizer import CurvAL
+except ImportError:
+    CurvAL = None
 
 
 logger = logging.getLogger(__name__)
@@ -130,7 +135,7 @@ class Trainer:
         logger.info(f"Loading dataset: {self.cfg.dataset.name}")
         
         # Get transforms
-        train_transform, val_transform = get_transforms(self.cfg.dataset)
+        train_transform, val_transform = get_transforms(self.cfg)
         
         # Load full dataset
         full_dataset = build_dataset(
@@ -252,6 +257,11 @@ class Trainer:
         lr = opt_cfg.get("learning_rate", self.cfg.training.learning_rate)
         
         if self.cfg.training.optimizer.lower() == "curvAL".lower():
+            if CurvAL is None:
+                raise ImportError(
+                    "CurvAL optimizer is not available. "
+                    "Please ensure src/optimizer.py exists and contains the CurvAL class."
+                )
             self.optimizer = CurvAL(
                 self.model.parameters(),
                 lr=lr,
