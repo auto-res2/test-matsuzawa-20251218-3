@@ -85,3 +85,42 @@
 [2025-12-18 11:17:45,433][__main__][INFO] - ================================================================================
 === [TRIAL RUN] PASSED for proposed-resnet20-cifar10 at Thu Dec 18 11:17:45 UTC 2025 ===
 
+=== [UV SYNC] Start at Thu Dec 18 11:23:30 UTC 2025 ===
+=== [UV SYNC] Finished successfully at Thu Dec 18 11:24:04 UTC 2025 ===
+=== [FULL EXPERIMENT] Start for comparative-1-resnet20-cifar10 at Thu Dec 18 11:24:04 UTC 2025 ===
+[2025-12-18 11:24:05,534][__main__][INFO] - ================================================================================
+[2025-12-18 11:24:05,534][__main__][INFO] - Starting experiment run: comparative-1-resnet20-cifar10
+[2025-12-18 11:24:05,534][__main__][INFO] - Mode: full
+[2025-12-18 11:24:05,534][__main__][INFO] - Results directory: .research/results
+[2025-12-18 11:24:05,534][__main__][INFO] - ================================================================================
+[2025-12-18 11:24:05,534][__main__][INFO] - Loading configuration from: config/runs/comparative-1-resnet20-cifar10.yaml
+[2025-12-18 11:24:05,550][__main__][INFO] - Full training mode: WandB online, full epochs, Optuna enabled
+[2025-12-18 11:24:05,550][__main__][INFO] - WandB: gengaru617-personal/2025-11-19
+[2025-12-18 11:24:05,550][__main__][INFO] - ================================================================================
+[2025-12-18 11:24:05,551][__main__][INFO] - LAUNCHING TRAINING SUBPROCESS
+[2025-12-18 11:24:05,551][__main__][INFO] - ================================================================================
+[W 2025-12-18 11:24:21,979] Trial 0 failed with parameters: {'learning_rate': 0.0005611516415334506} because of the following error: ValueError('`low > 0` must hold for `log=True`, but got (low=0.0, high=0.1).').
+Traceback (most recent call last):
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/.venv/lib/python3.11/site-packages/optuna/study/_optimize.py", line 205, in _run_trial
+    value_or_values = func(trial)
+                      ^^^^^^^^^^^
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/src/train.py", line 628, in <lambda>
+    lambda trial: objective(trial, cfg),
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/src/train.py", line 603, in objective
+    return trainer.train(trial)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/src/train.py", line 522, in train
+    trial_params = self._suggest_optuna_params(trial)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/src/train.py", line 482, in _suggest_optuna_params
+    params[param_name] = trial.suggest_float(
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/.venv/lib/python3.11/site-packages/optuna/trial/_trial.py", line 162, in suggest_float
+    distribution = FloatDistribution(low, high, log=log, step=step)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/.venv/lib/python3.11/site-packages/optuna/distributions.py", line 149, in __init__
+    raise ValueError(f"`low > 0` must hold for `log=True`, but got ({low=}, {high=}).")
+ValueError: `low > 0` must hold for `log=True`, but got (low=0.0, high=0.1).
+[W 2025-12-18 11:24:21,980] Trial 0 failed with value None.
+[2025-12-18 11:24:22,741][__main__][ERROR] - Training subprocess failed with return code 1

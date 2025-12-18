@@ -54,7 +54,7 @@ optuna:
       high: 0.01
     - param_name: weight_decay
       distribution_type: loguniform
-      low: 0.0
+      low: 0.00001
       high: 0.1
 
 evaluation:
