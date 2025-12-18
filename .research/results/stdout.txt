@@ -39,3 +39,17 @@
 [2025-12-18 11:09:41,092][__main__][INFO] - LAUNCHING TRAINING SUBPROCESS
 [2025-12-18 11:09:41,092][__main__][INFO] - ================================================================================
 [2025-12-18 11:09:54,433][__main__][ERROR] - Training subprocess failed with return code 1
+=== [UV SYNC] Start at Thu Dec 18 11:11:42 UTC 2025 ===
+=== [UV SYNC] Finished successfully at Thu Dec 18 11:12:16 UTC 2025 ===
+=== [TRIAL RUN] Start for proposed-resnet20-cifar10 at Thu Dec 18 11:12:16 UTC 2025 ===
+[2025-12-18 11:12:17,168][__main__][INFO] - ================================================================================
+[2025-12-18 11:12:17,168][__main__][INFO] - Starting experiment run: proposed-resnet20-cifar10
+[2025-12-18 11:12:17,168][__main__][INFO] - Mode: trial
+[2025-12-18 11:12:17,168][__main__][INFO] - Results directory: .research/results
+[2025-12-18 11:12:17,169][__main__][INFO] - ================================================================================
+[2025-12-18 11:12:17,169][__main__][INFO] - Loading configuration from: config/runs/proposed-resnet20-cifar10.yaml
+[2025-12-18 11:12:17,186][__main__][INFO] - Trial mode: WandB disabled, 1 epoch, no Optuna trials
+[2025-12-18 11:12:17,186][__main__][INFO] - ================================================================================
+[2025-12-18 11:12:17,186][__main__][INFO] - LAUNCHING TRAINING SUBPROCESS
+[2025-12-18 11:12:17,186][__main__][INFO] - ================================================================================
+[2025-12-18 11:12:31,013][__main__][ERROR] - Training subprocess failed with return code 1

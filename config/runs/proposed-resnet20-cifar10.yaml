@@ -31,17 +31,13 @@ training:
   learning_rate: 0.001
   batch_size: 128
   epochs: 160
-  optimizer: CurvAL
+  optimizer: adam
   warmup_steps: 500
   weight_decay: 0.01
   gradient_clip: 1.0
   scheduler: cosine
   seed: 42
   optimizer_config:
-    alpha_reweight: 0.2
-    kappa_0: 10
-    cov_rank: 20
-    cov_update_freq: 100
     betas: [0.9, 0.999]
     eps: 0.00000001
 
@@ -51,22 +47,14 @@ optuna:
   sampler: tpe
   pruner: median
   search_spaces:
-    - param_name: alpha_reweight
-      distribution_type: uniform
-      low: 0.05
-      high: 0.5
-    - param_name: kappa_0
-      distribution_type: int
-      low: 5.0
-      high: 20.0
-    - param_name: cov_rank
-      distribution_type: int
-      low: 10.0
-      high: 50.0
     - param_name: learning_rate
       distribution_type: loguniform
       low: 0.0001
       high: 0.01
+    - param_name: weight_decay
+      distribution_type: loguniform
+      low: 0.0
+      high: 0.1
 
 evaluation:
   primary_metric: test_accuracy
