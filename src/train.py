@@ -247,13 +247,26 @@ class Trainer:
     def _build_optimizer(self, trial_params: Optional[Dict[str, Any]] = None) -> None:
         """Build optimizer and learning rate scheduler."""
         logger.info(f"Building optimizer: {self.cfg.training.optimizer}")
-        
+
+        # Build opt_cfg dict safely, only accessing defined values
+        opt_cfg = {}
+        # Only copy values that are actually defined in the config
+        if hasattr(self.cfg.training, 'optimizer_config'):
+            from omegaconf import OmegaConf
+            # Get only the keys that are actually set (not ???)
+            for key in ['betas', 'eps', 'alpha_reweight', 'kappa_0', 'cov_rank', 'cov_update_freq']:
+                try:
+                    value = OmegaConf.select(self.cfg.training.optimizer_config, key)
+                    if value is not None and value != '???':
+                        opt_cfg[key] = value
+                except:
+                    pass  # Key not defined, skip it
+
         # Merge trial-specific params if provided (Optuna)
-        opt_cfg = dict(self.cfg.training.optimizer_config)
         if trial_params:
             opt_cfg.update(trial_params)
             logger.info(f"Merged trial params: {trial_params}")
-        
+
         lr = opt_cfg.get("learning_rate", self.cfg.training.learning_rate)
         
         if self.cfg.training.optimizer.lower() == "curvAL".lower():

@@ -124,3 +124,55 @@ Traceback (most recent call last):
 ValueError: `low > 0` must hold for `log=True`, but got (low=0.0, high=0.1).
 [W 2025-12-18 11:24:21,980] Trial 0 failed with value None.
 [2025-12-18 11:24:22,741][__main__][ERROR] - Training subprocess failed with return code 1
+=== [UV SYNC] Start at Thu Dec 18 11:29:39 UTC 2025 ===
+=== [UV SYNC] Finished successfully at Thu Dec 18 11:30:13 UTC 2025 ===
+=== [FULL EXPERIMENT] Start for comparative-1-resnet20-cifar10 at Thu Dec 18 11:30:13 UTC 2025 ===
+[2025-12-18 11:30:14,359][__main__][INFO] - ================================================================================
+[2025-12-18 11:30:14,359][__main__][INFO] - Starting experiment run: comparative-1-resnet20-cifar10
+[2025-12-18 11:30:14,359][__main__][INFO] - Mode: full
+[2025-12-18 11:30:14,359][__main__][INFO] - Results directory: .research/results
+[2025-12-18 11:30:14,359][__main__][INFO] - ================================================================================
+[2025-12-18 11:30:14,359][__main__][INFO] - Loading configuration from: config/runs/comparative-1-resnet20-cifar10.yaml
+[2025-12-18 11:30:14,375][__main__][INFO] - Full training mode: WandB online, full epochs, Optuna enabled
+[2025-12-18 11:30:14,376][__main__][INFO] - WandB: gengaru617-personal/2025-11-19
+[2025-12-18 11:30:14,376][__main__][INFO] - ================================================================================
+[2025-12-18 11:30:14,376][__main__][INFO] - LAUNCHING TRAINING SUBPROCESS
+[2025-12-18 11:30:14,376][__main__][INFO] - ================================================================================
+[W 2025-12-18 11:30:28,421] Trial 0 failed with parameters: {'learning_rate': 0.0005611516415334506, 'weight_decay': 0.06351221010640701} because of the following error: MissingMandatoryValue('Missing mandatory value: training.optimizer_config.alpha_reweight\n    full_key: training.optimizer_config.alpha_reweight\n    object_type=dict').
+Traceback (most recent call last):
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/.venv/lib/python3.11/site-packages/optuna/study/_optimize.py", line 205, in _run_trial
+    value_or_values = func(trial)
+                      ^^^^^^^^^^^
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/src/train.py", line 628, in <lambda>
+    lambda trial: objective(trial, cfg),
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/src/train.py", line 603, in objective
+    return trainer.train(trial)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/src/train.py", line 523, in train
+    self._build_optimizer(trial_params)
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/src/train.py", line 252, in _build_optimizer
+    opt_cfg = dict(self.cfg.training.optimizer_config)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/.venv/lib/python3.11/site-packages/omegaconf/dictconfig.py", line 375, in __getitem__
+    self._format_and_raise(key=key, value=None, cause=e)
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/.venv/lib/python3.11/site-packages/omegaconf/base.py", line 231, in _format_and_raise
+    format_and_raise(
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/.venv/lib/python3.11/site-packages/omegaconf/_utils.py", line 899, in format_and_raise
+    _raise(ex, cause)
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/.venv/lib/python3.11/site-packages/omegaconf/_utils.py", line 797, in _raise
+    raise ex.with_traceback(sys.exc_info()[2])  # set env var OC_CAUSE=1 for full trace
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/.venv/lib/python3.11/site-packages/omegaconf/dictconfig.py", line 369, in __getitem__
+    return self._get_impl(key=key, default_value=_DEFAULT_MARKER_)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/.venv/lib/python3.11/site-packages/omegaconf/dictconfig.py", line 451, in _get_impl
+    return self._resolve_with_default(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/.venv/lib/python3.11/site-packages/omegaconf/basecontainer.py", line 96, in _resolve_with_default
+    raise MissingMandatoryValue("Missing mandatory value: $FULL_KEY")
+omegaconf.errors.MissingMandatoryValue: Missing mandatory value: training.optimizer_config.alpha_reweight
+    full_key: training.optimizer_config.alpha_reweight
+    object_type=dict
+[W 2025-12-18 11:30:28,423] Trial 0 failed with value None.
+[2025-12-18 11:30:28,983][__main__][ERROR] - Training subprocess failed with return code 1
