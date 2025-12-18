@@ -1100,3 +1100,254 @@ Installed 81 packages in 436ms
 2025-12-18 11:17:44,788 - __main__ - INFO - Best Validation Accuracy: 10.55% (epoch 1)
 2025-12-18 11:17:44,788 - __main__ - INFO - Total training time: 7.85 seconds
 2025-12-18 11:17:44,788 - __main__ - INFO - Training complete. Best validation accuracy: 10.55%
+Downloading cpython-3.11.14-linux-x86_64-gnu (download) (29.1MiB)
+ Downloaded cpython-3.11.14-linux-x86_64-gnu (download)
+Using CPython 3.11.14
+Creating virtual environment at: .venv
+Resolved 126 packages in 224ms
+   Building curval-research @ file:///home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3
+Downloading matplotlib (8.3MiB)
+Downloading nvidia-cusparselt-cu12 (273.9MiB)
+Downloading nvidia-curand-cu12 (60.7MiB)
+Downloading nvidia-nvjitlink-cu12 (37.4MiB)
+Downloading nvidia-cuda-cupti-cu12 (9.8MiB)
+Downloading pillow (6.7MiB)
+Downloading grpcio (6.3MiB)
+Downloading sympy (6.0MiB)
+Downloading fonttools (4.8MiB)
+Downloading sqlalchemy (3.2MiB)
+Downloading networkx (2.0MiB)
+Downloading pydantic-core (2.0MiB)
+Downloading setuptools (1.1MiB)
+Downloading nvidia-cufile-cu12 (1.1MiB)
+Downloading nvidia-nvshmem-cu12 (118.9MiB)
+Downloading pandas (12.2MiB)
+Downloading nvidia-cufft-cu12 (184.2MiB)
+Downloading nvidia-cuda-nvrtc-cu12 (84.0MiB)
+Downloading scikit-learn (8.7MiB)
+Downloading tensorboard (5.3MiB)
+Downloading triton (162.5MiB)
+Downloading torchvision (7.7MiB)
+Downloading kiwisolver (1.4MiB)
+Downloading torch (858.1MiB)
+Downloading tensorboard-data-server (6.3MiB)
+Downloading nvidia-cublas-cu12 (566.8MiB)
+Downloading numpy (16.1MiB)
+Downloading nvidia-cudnn-cu12 (674.0MiB)
+Downloading wandb (21.8MiB)
+Downloading nvidia-nccl-cu12 (307.4MiB)
+Downloading nvidia-cusparse-cu12 (274.9MiB)
+Downloading scipy (34.2MiB)
+Downloading nvidia-cusolver-cu12 (255.1MiB)
+ Downloaded nvidia-cufile-cu12
+ Downloaded kiwisolver
+ Downloaded pydantic-core
+      Built curval-research @ file:///home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3
+ Downloaded sqlalchemy
+ Downloaded setuptools
+ Downloaded networkx
+ Downloaded fonttools
+ Downloaded tensorboard
+ Downloaded grpcio
+ Downloaded tensorboard-data-server
+ Downloaded pillow
+ Downloaded torchvision
+ Downloaded matplotlib
+ Downloaded scikit-learn
+ Downloaded nvidia-cuda-cupti-cu12
+ Downloaded sympy
+ Downloaded numpy
+ Downloaded pandas
+ Downloaded nvidia-nvjitlink-cu12
+ Downloaded scipy
+ Downloaded wandb
+ Downloaded nvidia-curand-cu12
+ Downloaded nvidia-cuda-nvrtc-cu12
+ Downloaded nvidia-nvshmem-cu12
+ Downloaded nvidia-cufft-cu12
+ Downloaded triton
+ Downloaded nvidia-cusolver-cu12
+ Downloaded nvidia-cusparse-cu12
+ Downloaded nvidia-cusparselt-cu12
+ Downloaded nvidia-nccl-cu12
+ Downloaded nvidia-cublas-cu12
+ Downloaded nvidia-cudnn-cu12
+ Downloaded torch
+Prepared 81 packages in 33.28s
+Installed 81 packages in 534ms
+ + absl-py==2.3.1
+ + alembic==1.17.2
+ + annotated-types==0.7.0
+ + antlr4-python3-runtime==4.9.3
+ + certifi==2025.11.12
+ + charset-normalizer==3.4.4
+ + click==8.3.1
+ + colorlog==6.10.1
+ + contourpy==1.3.3
+ + curval-research==0.1.0 (from file:///home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3)
+ + cycler==0.12.1
+ + filelock==3.20.1
+ + fonttools==4.61.1
+ + fsspec==2025.12.0
+ + gitdb==4.0.12
+ + gitpython==3.1.45
+ + greenlet==3.3.0
+ + grpcio==1.76.0
+ + hydra-core==1.3.2
+ + idna==3.11
+ + jinja2==3.1.6
+ + joblib==1.5.3
+ + kiwisolver==1.4.9
+ + mako==1.3.10
+ + markdown==3.10
+ + markupsafe==3.0.3
+ + matplotlib==3.10.8
+ + mpmath==1.3.0
+ + networkx==3.6.1
+ + numpy==2.3.5
+ + nvidia-cublas-cu12==12.8.4.1
+ + nvidia-cuda-cupti-cu12==12.8.90
+ + nvidia-cuda-nvrtc-cu12==12.8.93
+ + nvidia-cuda-runtime-cu12==12.8.90
+ + nvidia-cudnn-cu12==9.10.2.21
+ + nvidia-cufft-cu12==11.3.3.83
+ + nvidia-cufile-cu12==1.13.1.3
+ + nvidia-curand-cu12==10.3.9.90
+ + nvidia-cusolver-cu12==11.7.3.90
+ + nvidia-cusparse-cu12==12.5.8.93
+ + nvidia-cusparselt-cu12==0.7.1
+ + nvidia-nccl-cu12==2.27.5
+ + nvidia-nvjitlink-cu12==12.8.93
+ + nvidia-nvshmem-cu12==3.3.20
+ + nvidia-nvtx-cu12==12.8.90
+ + omegaconf==2.3.0
+ + optuna==4.6.0
+ + packaging==25.0
+ + pandas==2.3.3
+ + pillow==12.0.0
+ + platformdirs==4.5.1
+ + protobuf==6.33.2
+ + pydantic==2.12.5
+ + pydantic-core==2.41.5
+ + pyparsing==3.2.5
+ + python-dateutil==2.9.0.post0
+ + pytz==2025.2
+ + pyyaml==6.0.3
+ + requests==2.32.5
+ + scikit-learn==1.8.0
+ + scipy==1.16.3
+ + seaborn==0.13.2
+ + sentry-sdk==2.48.0
+ + setuptools==80.9.0
+ + six==1.17.0
+ + smmap==5.0.2
+ + sqlalchemy==2.0.45
+ + sympy==1.14.0
+ + tensorboard==2.20.0
+ + tensorboard-data-server==0.7.2
+ + threadpoolctl==3.6.0
+ + torch==2.9.1
+ + torchvision==0.24.1
+ + tqdm==4.67.1
+ + triton==3.5.1
+ + typing-extensions==4.15.0
+ + typing-inspection==0.4.2
+ + tzdata==2025.3
+ + urllib3==2.6.2
+ + wandb==0.23.1
+ + werkzeug==3.1.4
+2025-12-18 11:19:14,262 - __main__ - INFO - ================================================================================
+2025-12-18 11:19:14,263 - __main__ - INFO - Running Optuna optimization with 30 trials
+2025-12-18 11:19:14,263 - __main__ - INFO - ================================================================================
+[I 2025-12-18 11:19:14,263] A new study created in memory with name: no-name-9db2e09d-819b-4340-a0c0-c9c621e9893b
+  0%|          | 0/30 [00:00<?, ?it/s]2025-12-18 11:19:14,268 - __main__ - INFO - Trainer initialized on device: cpu
+2025-12-18 11:19:14,268 - __main__ - INFO - ================================================================================
+2025-12-18 11:19:14,268 - __main__ - INFO - STARTING TRAINING
+2025-12-18 11:19:14,268 - __main__ - INFO - ================================================================================
+2025-12-18 11:19:14,269 - __main__ - INFO - Building model: ResNet-20
+2025-12-18 11:19:14,277 - __main__ - INFO - Model parameters - Total: 272,474, Trainable: 272,474
+2025-12-18 11:19:14,286 - __main__ - INFO - ✓ Model output shape verified: torch.Size([2, 10])
+2025-12-18 11:19:14,286 - __main__ - INFO - Loading dataset: CIFAR-10
+
+  0%|          | 0.00/170M [00:00<?, ?B/s][A
+  0%|          | 32.8k/170M [00:00<10:01, 284kB/s][A
+  0%|          | 229k/170M [00:00<02:34, 1.10MB/s][A
+  1%|          | 918k/170M [00:00<00:51, 3.28MB/s][A
+  2%|▏         | 3.57M/170M [00:00<00:14, 11.4MB/s][A
+  5%|▌         | 9.01M/170M [00:00<00:06, 25.7MB/s][A
+  8%|▊         | 12.8M/170M [00:00<00:05, 29.4MB/s][A
+ 11%|█         | 19.0M/170M [00:00<00:04, 36.9MB/s][A
+ 15%|█▍        | 24.8M/170M [00:00<00:03, 43.0MB/s][A
+ 18%|█▊        | 29.9M/170M [00:00<00:03, 45.5MB/s][A
+ 20%|██        | 34.6M/170M [00:01<00:03, 44.9MB/s][A
+ 23%|██▎       | 39.1M/170M [00:01<00:02, 43.9MB/s][A
+ 26%|██▌       | 43.5M/170M [00:01<00:02, 43.6MB/s][A
+ 28%|██▊       | 48.1M/170M [00:01<00:02, 44.1MB/s][A
+ 31%|███       | 52.5M/170M [00:01<00:02, 44.1MB/s][A
+ 33%|███▎      | 56.9M/170M [00:01<00:02, 43.5MB/s][A
+ 36%|███▌      | 61.3M/170M [00:01<00:02, 42.6MB/s][A
+ 39%|███▊      | 65.8M/170M [00:01<00:02, 43.2MB/s][A
+ 41%|████      | 70.1M/170M [00:01<00:02, 42.5MB/s][A
+ 44%|████▍     | 74.7M/170M [00:02<00:02, 43.6MB/s][A
+ 47%|████▋     | 79.8M/170M [00:02<00:01, 45.7MB/s][A
+ 50%|████▉     | 84.4M/170M [00:02<00:01, 44.6MB/s][A
+ 52%|█████▏    | 89.3M/170M [00:02<00:01, 45.8MB/s][A
+ 55%|█████▌    | 93.9M/170M [00:02<00:01, 45.2MB/s][A
+ 58%|█████▊    | 98.5M/170M [00:02<00:01, 45.2MB/s][A
+ 61%|██████    | 103M/170M [00:02<00:01, 46.3MB/s] [A
+ 63%|██████▎   | 108M/170M [00:02<00:01, 44.8MB/s][A
+ 66%|██████▌   | 113M/170M [00:02<00:01, 45.8MB/s][A
+ 69%|██████▉   | 118M/170M [00:02<00:01, 45.0MB/s][A
+ 72%|███████▏  | 122M/170M [00:03<00:01, 45.8MB/s][A
+ 74%|███████▍  | 127M/170M [00:03<00:00, 45.4MB/s][A
+ 77%|███████▋  | 132M/170M [00:03<00:00, 46.4MB/s][A
+ 80%|████████  | 136M/170M [00:03<00:00, 45.9MB/s][A
+ 83%|████████▎ | 141M/170M [00:03<00:00, 45.0MB/s][A
+ 86%|████████▌ | 146M/170M [00:03<00:00, 45.6MB/s][A
+ 88%|████████▊ | 151M/170M [00:03<00:00, 46.3MB/s][A
+ 91%|█████████ | 155M/170M [00:03<00:00, 46.0MB/s][A
+ 94%|█████████▍| 160M/170M [00:03<00:00, 46.7MB/s][A
+ 97%|█████████▋| 165M/170M [00:03<00:00, 45.7MB/s][A
+100%|█████████▉| 170M/170M [00:04<00:00, 46.6MB/s][A100%|██████████| 170M/170M [00:04<00:00, 41.6MB/s]
+2025-12-18 11:19:21,635 - __main__ - INFO - Train samples: 45000, Val samples: 5000, Test samples: 10000
+2025-12-18 11:19:21,635 - __main__ - INFO - Train batches per epoch: 351
+2025-12-18 11:19:21,637 - __main__ - INFO - ✓ Normalization stats validated - Mean: [0.4914 0.4822 0.4465], Std: [0.2023 0.1994 0.201 ]
+                                        0%|          | 0/30 [00:07<?, ?it/s]                                        0%|          | 0/30 [00:07<?, ?it/s]  0%|          | 0/30 [00:07<?, ?it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/src/train.py", line 656, in <module>
+    best_val, best_params = run_optuna_optimization(cfg)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/src/train.py", line 627, in run_optuna_optimization
+    study.optimize(
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/.venv/lib/python3.11/site-packages/optuna/study/study.py", line 490, in optimize
+    _optimize(
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/.venv/lib/python3.11/site-packages/optuna/study/_optimize.py", line 67, in _optimize
+    _optimize_sequential(
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/.venv/lib/python3.11/site-packages/optuna/study/_optimize.py", line 164, in _optimize_sequential
+    frozen_trial_id = _run_trial(study, func, catch)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/.venv/lib/python3.11/site-packages/optuna/study/_optimize.py", line 262, in _run_trial
+    raise func_err
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/.venv/lib/python3.11/site-packages/optuna/study/_optimize.py", line 205, in _run_trial
+    value_or_values = func(trial)
+                      ^^^^^^^^^^^
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/src/train.py", line 628, in <lambda>
+    lambda trial: objective(trial, cfg),
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/src/train.py", line 603, in objective
+    return trainer.train(trial)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/src/train.py", line 522, in train
+    trial_params = self._suggest_optuna_params(trial)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/src/train.py", line 482, in _suggest_optuna_params
+    params[param_name] = trial.suggest_float(
+                         ^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/.venv/lib/python3.11/site-packages/optuna/trial/_trial.py", line 162, in suggest_float
+    distribution = FloatDistribution(low, high, log=log, step=step)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/test-matsuzawa-20251218-3/test-matsuzawa-20251218-3/.venv/lib/python3.11/site-packages/optuna/distributions.py", line 149, in __init__
+    raise ValueError(f"`low > 0` must hold for `log=True`, but got ({low=}, {high=}).")
+ValueError: `low > 0` must hold for `log=True`, but got (low=0.0, high=0.1).
