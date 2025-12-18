@@ -17,6 +17,7 @@ dataset:
   train_split: 50000
   test_split: 10000
   num_classes: 10
+  channels: 3
   preprocessing:
     normalize: true
     mean: [0.4914, 0.4822, 0.4465]
